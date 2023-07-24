@@ -7,12 +7,13 @@ import sys, os, datetime
 def demo(args):
 
     # Hardware reset
-    ctx = rs.context()
-    devices = ctx.query_devices()
-    for dev in devices:
-        dev.hardware_reset()
-        
-    save_to_files = False
+	ctx = rs.context()
+	devices = ctx.query_devices()
+	for dev in devices:
+		dev.hardware_reset()
+	
+	save_to_files = False
+
 	if len(args) > 0:
 		a0 = args[0]
 		a0 = a0.lower().strip()
